@@ -1,0 +1,78 @@
+Project Overview
+Develop a comprehensive GPA calculator system for students that includes user authentication, course input for GPA calculation, and an admin interface for managing submitted transcript applications. The system should be robust and modular, integrating all functionalities into a single application.
+
+Technology Stack
+•	Frontend: HTML5, CSS3, JavaScript, Bootstrap
+•	Backend: Node.js with Express.js
+•	Database: MySQL
+•	Authentication: JWT (JSON Web Tokens)
+
+Provide mysql table creation quries in a separate file.
+
+User Stories
+For Students
+1.	Login:
+o	As a student, I want to log in using my credentials so that I can access my GPA calculation and transcript application functionalities.
+2.	Calculate GPA:
+o	As a student, I want to input my course details (course name, course code, credit hrs, marks, semester) so that I can calculate my GPA & CGPA. I shall be able to see the generated grade points and grades for each course as per BU grading policy.
+o	As a student, I want to see the calculated GPA after submitting my course details.
+o	As a Student, I shall be able import the required information about courses, credit hrs, marks, semester etc. in an excel file. 
+3.	Submit Transcript Application:
+o	As a student, I want to submit an application for my transcript so that I can receive it from the exam department.
+
+For Admins (Exam Department)
+1.	Login:
+o	As an admin, I want to log in using my credentials so that I can manage transcript applications.
+2.	View Applications:
+o	As an admin, I want to view all submitted transcript applications so that I can process them.
+3.	Update Application Status:
+o	As an admin, I want to update the status of a transcript application (Underprocess, Ready to Collect) so that students are informed about the progress.
+4.	Delete Application:
+o	As an admin, I want to delete an application so that I can manage the application records efficiently.
+
+Functional Requirements
+Authentication and Authorization
+1.	The system should support user registration and login using JWT for authentication.
+2.	Users should be able to log in using their username and password.
+3.	JWT tokens should be used to authenticate requests to the backend.
+GPA Calculation
+1.	The GPA calculation page should allow students to input multiple courses with their respective grades and credits.
+2.	The system should calculate the GPA based on the input and display the result.
+3.	The calculation should convert letter grades to grade points using a predefined scale.
+Transcript Application Submission
+1.	The system should allow students to submit their transcript applications.
+2.	The application form should include fields for student name, student ID, program, and contact information.
+3.	Submitted applications should be stored in the database for admin review.
+Admin Interface
+1.	Admins should have a separate login interface.
+2.	Admins should be able to view all submitted transcript applications.
+3.	Admins should be able to update the status of an application.
+4.	Admins should be able to delete an application.
+
+Non-Functional Requirements
+1.	Performance:
+o	The system should handle concurrent users efficiently.
+2.	Security:
+o	Sensitive data should be encrypted.
+o	Authentication should be secure and resilient against attacks.
+3.	Usability:
+o	The user interface should be intuitive and easy to use.
+4.	Scalability:
+o	The system should be scalable to accommodate future enhancements.
+
+Grading Scale for Bahria University
+Bahria University follows a specific grading scale to assign grade points to letter grades. Here is the grading scale:
+Letter Grade	Grade Points	Marks
+A	4.0	85
+A-	3.7	80
+B+	3.3	75
+B	3.0	71
+B-	2.7	68
+C+	2.3	64
+C	2.0	60
+C-	1.7	57
+D+	1.3	53
+D	1.0	50
+F	0.0	0-49
+
+Develop the complete backend that will be used for the system.
